@@ -67,7 +67,7 @@ fi
 JEKYLL_ENV=production bundle exec ${BUNDLE_ARGS} jekyll build -s ${GITHUB_WORKSPACE}/${JEKYLL_SRC} -d build ${VERBOSE}
 echo "Jekyll build done"
 
-cd build
+#cd build
 
 # No need to have GitHub Pages to run Jekyll
 touch .nojekyll
@@ -96,6 +96,7 @@ remote_repo="https://${JEKYLL_PAT}@github.com/${GITHUB_REPOSITORY}.git" && \
 git init && \
 git config user.name "${GITHUB_ACTOR}" && \
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com" && \
+#
 git add . && \
 git commit -m "jekyll build from Action ${GITHUB_SHA}" && \
 #git push --force $remote_repo master:$remote_branch && \
