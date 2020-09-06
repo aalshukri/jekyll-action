@@ -96,8 +96,6 @@ remote_repo="https://${JEKYLL_PAT}@github.com/${GITHUB_REPOSITORY}.git" && \
 git init && \
 git config user.name "${GITHUB_ACTOR}" && \
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com" && \
-#added pull
-git pull $remote_repo master:$remote_branch && \
 git add . && \
 git commit -m "jekyll build from Action ${GITHUB_SHA}" && \
 #git push --force $remote_repo master:$remote_branch && \
