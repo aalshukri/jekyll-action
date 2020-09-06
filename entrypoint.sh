@@ -70,7 +70,7 @@ echo "Jekyll build done"
 #cd build
 
 # No need to have GitHub Pages to run Jekyll
-touch .nojekyll
+#touch .nojekyll
 
 
 if [ -n "${INPUT_TARGET_BRANCH}" ]; then
